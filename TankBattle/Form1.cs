@@ -15,7 +15,8 @@ namespace TankBattle
     {
         TankCilent tc = new TankCilent();
 
-
+        Boolean startClik = false;
+        Boolean stopClik = false;
         public Form1()
         {
             
@@ -27,15 +28,13 @@ namespace TankBattle
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            SolidBrush sb = new SolidBrush(Color.Black);
-
-            g.FillRectangle(sb, new Rectangle(0, 0, TankCilent.PLAY_WIDTH, TankCilent.PLAY_HEIGHT));     
-              
+            tc.update(g);
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
+        { 
             this.MinimumSize = new Size(TankCilent.GAME_WIDTH, TankCilent.GAME_HEIGHT);
+           
             tc.lauchFrame();
             
         }
@@ -44,17 +43,22 @@ namespace TankBattle
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            tc.paint(g);
-            timer1.Start();
+            if (startClik == false&&stopClik==false)
+            {
+                g.DrawImage(Properties.Resources.主图, 0, 0);
+            }
+            else {
+                tc.paint(g);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             panel1.Refresh();
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer |
-                   ControlStyles.ResizeRedraw |
-                   ControlStyles.AllPaintingInWmPaint, true);
-            
+                    ControlStyles.ResizeRedraw |
+                    ControlStyles.AllPaintingInWmPaint, true);
+
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -68,8 +72,26 @@ namespace TankBattle
             tc.myTank.KeyReleased(e);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            startClik = true;
+            timer1.Start();
+        }
 
-   
-      
+        private void button2_Click(object sender, EventArgs e)
+        {
+            stopClik = true;
+            timer1.Stop();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -54,6 +54,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Missile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,6 +68,9 @@
     <Compile Include="Wall.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,10 +117,6 @@
     <Content Include="image\missileR.gif" />
     <Content Include="image\missileU.gif" />
     <Content Include="image\s.png" />
-    <Content Include="image\TA01.png" />
-    <Content Include="image\TA02.png" />
-    <Content Include="image\TA03.png" />
-    <Content Include="image\TA04.png" />
     <Content Include="image\tankD1.png" />
     <Content Include="image\tankD2.png" />
     <Content Include="image\tankL1.png" />
@@ -125,7 +130,6 @@
     <Content Include="image\w03.png" />
     <Content Include="image\you win.jpg" />
     <Content Include="image\主图.jpg" />
-    <Content Include="image\关于.jpg" />
     <Content Include="image\帮助.png" />
     <Content Include="image\开始.jpg" />
     <Content Include="image\心.jpg" />

@@ -195,7 +195,7 @@ namespace TankBattle
             if(x<0)x=0;
             if(y<25)y=25;
             if (x + Tank.WIDTH >TankCilent.GAME_WIDTH - 200) x = TankCilent.GAME_WIDTH - Tank.WIDTH - 200;
-            if (y + Tank.HEIGHT > TankCilent.GAME_HEIGHT) y = TankCilent.GAME_HEIGHT - Tank.HEIGHT;
+            if (y + Tank.HEIGHT > TankCilent.GAME_HEIGHT-40) y = TankCilent.GAME_HEIGHT - Tank.HEIGHT-40;
             
             if(!ownTank){
                
@@ -372,11 +372,10 @@ namespace TankBattle
    
             public void drawLine(Graphics g)
             {
-                Tank t = new Tank();
                 SolidBrush sb = new SolidBrush(Color.Red);
-                g.DrawRectangle(new Pen(sb),t.x,t.x-10,WIDTH,10);//画在坦克上方
-                int w = WIDTH * t.life / 100;
-                g.FillRectangle(sb,t.x,t.y-10,w,10);
+                g.DrawRectangle(new Pen(sb),this.x,this.y-10,WIDTH,10);//画在坦克上方
+                int w = WIDTH * this.life / 100;
+                g.FillRectangle(sb,this.x,this.y-10,w,10);
             }
         
         /*

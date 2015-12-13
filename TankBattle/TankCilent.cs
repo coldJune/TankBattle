@@ -29,9 +29,9 @@ namespace TankBattle
         public  static List<Missile> missile = new List<Missile>();//装子弹
         public  static List<Tank> tanks = new List<Tank>();//装坦克
 
+        Bitmap offScreenImage = null;
         public Image[] backGroundImages = {Properties.Resources.开始,
                                                    Properties.Resources.帮助,
-                                                   Properties.Resources.关于,
                                                    Properties.Resources.you_win,
                                                    Properties.Resources.game_over};
         
@@ -120,6 +120,18 @@ namespace TankBattle
                 t.collodesWithWall(w);
                 t.draw(g);
             }
+        }
+        public void update(Graphics g)
+        {
+            if (offScreenImage == null)
+            {
+                offScreenImage = new Bitmap(PLAY_WIDTH ,PLAY_HEIGHT);
+            }
+            Graphics gOffScreen = Graphics.FromImage(offScreenImage);
+            gOffScreen.Clear(Color.Black);
+            SolidBrush sb = new SolidBrush(Color.Black);
+            gOffScreen.FillRectangle(sb,0,0, PLAY_WIDTH, PLAY_HEIGHT);
+            g.DrawImage(offScreenImage,0,0);
         }
         //坦克主窗口
         public void lauchFrame(){
