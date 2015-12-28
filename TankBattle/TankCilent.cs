@@ -18,7 +18,7 @@ namespace TankBattle
         //设定游戏界面大小
         public const int PLAY_WIDTH = 600;
         public const int PLAY_HEIGHT = 600;
-        public  Boolean baselive = true;
+        public  static Boolean baselive = true;
         public  int TANKNUM = 0;
 
         public static TankCilent tc;
@@ -30,8 +30,7 @@ namespace TankBattle
         public  static List<Tank> tanks = new List<Tank>();//装坦克
 
         Bitmap offScreenImage = null;
-        public Image[] backGroundImages = {Properties.Resources.开始,
-                                                   Properties.Resources.帮助,
+        public Image[] backGroundImages = {        Properties.Resources.帮助,
                                                    Properties.Resources.you_win,
                                                    Properties.Resources.game_over};
         
@@ -42,7 +41,7 @@ namespace TankBattle
         public void paint(Graphics g)
         {
            
-            g.DrawImage(backGroundImages[0], 600, 0);
+            
             Wall w = new Wall();
             w.draw(g);
 
@@ -77,17 +76,17 @@ namespace TankBattle
             }
             if (TANKNUM >= 30 && tanks.Count() == 0)
             {
-                g.DrawImage(backGroundImages[3], 0, 0);
+                g.DrawImage(backGroundImages[2], 0, 0);
                 myTank.restartChance = 0;
                 myTank.setLive(false);
             }
             else if (myTank.isLive() == false && myTank.restartChance == 0)
             {
-                g.DrawImage(backGroundImages[4], 0, 0);
+                g.DrawImage(backGroundImages[2], 0, 0);
             }
             if (baselive == false)
             {
-                g.DrawImage(backGroundImages[4], 0, 0);
+                g.DrawImage(backGroundImages[2], 0, 0);
                 myTank.restartChance = 0;
                 myTank.setLive(false);
             }

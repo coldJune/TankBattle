@@ -29,6 +29,8 @@ namespace TankBattle
         {
             Graphics g = e.Graphics;
             tc.update(g);
+            label2.Text = Tank.bombNumber.ToString();
+            label4.Text = tc.myTank.restartChance.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -47,9 +49,10 @@ namespace TankBattle
             {
                 g.DrawImage(Properties.Resources.主图, 0, 0);
             }
-            else {
+            else{
                 tc.paint(g);
             }
+        
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -91,7 +94,37 @@ namespace TankBattle
 
         private void button4_Click(object sender, EventArgs e)
         {
+            help f2 = new help();
+            f2.Show();
+            stopClik = true;
+            timer1.Stop();
+        }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.Up:
+                case Keys.Left:
+                case Keys.Down:
+                case Keys.Right:
+     return true;
+                default:
+                    return base.ProcessDialogKey(keyData);
+            }
         }
     }
 }

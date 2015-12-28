@@ -1,10 +1,9 @@
 J:\C#\TankBattle\TankBattle\bin\Debug\TankBattle.exe.config
-J:\C#\TankBattle\TankBattle\obj\Debug\TankBattle.csprojResolveAssemblyReference.cache
-J:\C#\TankBattle\TankBattle\obj\Debug\TankBattle.Form1.resources
-J:\C#\TankBattle\TankBattle\obj\Debug\TankBattle.Properties.Resources.resources
-J:\C#\TankBattle\TankBattle\obj\Debug\TankBattle.csproj.GenerateResource.Cache
 J:\C#\TankBattle\TankBattle\bin\Debug\TankBattle.exe
 J:\C#\TankBattle\TankBattle\bin\Debug\TankBattle.pdb
+J:\C#\TankBattle\TankBattle\obj\Debug\TankBattle.Form1.resources
+J:\C#\TankBattle\TankBattle\obj\Debug\TankBattle.help.resources
+J:\C#\TankBattle\TankBattle\obj\Debug\TankBattle.Properties.Resources.resources
+J:\C#\TankBattle\TankBattle\obj\Debug\TankBattle.csproj.GenerateResource.Cache
 J:\C#\TankBattle\TankBattle\obj\Debug\TankBattle.exe
 J:\C#\TankBattle\TankBattle\obj\Debug\TankBattle.pdb
-J:\C#\TankBattle\TankBattle\obj\Debug\TankBattle.Form2.resources

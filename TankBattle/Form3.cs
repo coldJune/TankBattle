@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace TankBattle
 {
-    public partial class Form3 : Form
+    public partial class help : Form
     {
-        public Form3()
+        public help()
         {
             InitializeComponent();
+        }
+
+        private void 帮助_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
