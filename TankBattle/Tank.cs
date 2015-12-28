@@ -29,7 +29,7 @@ namespace TankBattle
         public Boolean live = true;
         private int life = 100;
 
-        public int bombNumber = 3;//爆炸次数
+        public static int bombNumber = 3;//爆炸次数
         public int restartChance = 1;//重新开始次数
 
         public void setLife(int life)
@@ -229,16 +229,16 @@ namespace TankBattle
                         }
                     }
                     break;
-                case Keys.Left:
+                case Keys.J:
                     bL = true;
                     break;
-                case Keys.Up:
+                case Keys.I:
                     bU = true;
                     break;
-                case Keys.Right:
+                case Keys.L:
                     bR=true;
                     break;
-                case Keys.Down:
+                case Keys.K:
                     bD=true;
                     break;
             }
@@ -260,16 +260,16 @@ namespace TankBattle
                         bombNumber--;
                     }
                     break;
-                case Keys.Left:
+                case Keys.J:
                     bL = false;
                     break;
-                case Keys.Down:
+                case Keys.K:
                     bD = false;
                     break;
-                case Keys.Up:
+                case Keys.I:
                     bU = false;
                     break;
-                case Keys.Right:
+                case Keys.L:
                     bR = false;
                     break;
             }

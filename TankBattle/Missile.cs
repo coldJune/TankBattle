@@ -175,7 +175,7 @@ namespace TankBattle
                         } if (Wall.map[i, j] == 4 || Wall.map[i, j] == 5 || Wall.map[i, j] == 6 || Wall.map[i, j] == 7)
                         {
                             Wall.map[i, j] = 0;
-                            tc.baselive = false;
+                            TankCilent.baselive = false;
                         }
                         this.live = false;
                     }
